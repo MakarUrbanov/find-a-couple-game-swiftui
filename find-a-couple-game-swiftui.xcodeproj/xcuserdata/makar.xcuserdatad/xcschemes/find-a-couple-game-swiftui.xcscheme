@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "356CA61727C1B03600135703"
+               BuildableName = "find-a-couple-game-swiftui.app"
+               BlueprintName = "find-a-couple-game-swiftui"
+               ReferencedContainer = "container:find-a-couple-game-swiftui.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "356CA61727C1B03600135703"
+            BuildableName = "find-a-couple-game-swiftui.app"
+            BlueprintName = "find-a-couple-game-swiftui"
+            ReferencedContainer = "container:find-a-couple-game-swiftui.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
