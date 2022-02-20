@@ -10,9 +10,12 @@
 		356CA61C27C1B03600135703 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CA61B27C1B03600135703 /* App.swift */; };
 		356CA62027C1B03700135703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CA61F27C1B03700135703 /* Assets.xcassets */; };
 		356CA62327C1B03700135703 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CA62227C1B03700135703 /* Preview Assets.xcassets */; };
+		356CA62D27C1E02900135703 /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = 356CA62C27C1E02900135703 /* WrappingStack */; };
+		62DB7251780077AA240EBDCB /* PlaygroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */; };
+		62DB74F00CB6E84D3A6BDBD2 /* StartButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */; };
 		62DB76C79F2817F8E7ADEE2A /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB72B69DB99F9DA539DF77 /* utils.swift */; };
 		62DB7762237257DDD65A5FD7 /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB72CAE5B4C8F8F9B3EA1A /* GameCard.swift */; };
-		62DB779C8443B06BB100C683 /* PlaygroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7E0979D6F8F891E0042F /* PlaygroundList.swift */; };
+		62DB778798378E8F47CC6654 /* PlaygroundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */; };
 		62DB77EACC8B03CB36EA50B4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB791EF0B4AC6A9977018A /* MainScreen.swift */; };
 		62DB78721DBC5793E11F4DC7 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7F46787A94C2B0B28934 /* Playground.swift */; };
 		62DB7B57660C3E6FA28B9300 /* PlaygroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */; };
@@ -24,11 +27,13 @@
 		356CA61F27C1B03700135703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356CA62227C1B03700135703 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		356CA62A27C1B07600135703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundList.swift; path = Components/Playground/PlaygroundList.swift; sourceTree = "<group>"; };
 		62DB72B69DB99F9DA539DF77 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = utils.swift; path = Models/Playground/utils.swift; sourceTree = "<group>"; };
 		62DB72CAE5B4C8F8F9B3EA1A /* GameCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCard.swift; path = Models/Playground/GameCard.swift; sourceTree = "<group>"; };
+		62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundItem.swift; path = Components/Playground/PlaygroundItem.swift; sourceTree = "<group>"; };
 		62DB7637A09A7B037C52BF45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		62DB791EF0B4AC6A9977018A /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreen.swift; path = Screens/MainScreen.swift; sourceTree = "<group>"; };
-		62DB7E0979D6F8F891E0042F /* PlaygroundList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundList.swift; path = Components/PlaygroundList.swift; sourceTree = "<group>"; };
+		62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartButtons.swift; path = Components/Playground/StartButtons.swift; sourceTree = "<group>"; };
 		62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundModel.swift; path = Models/Playground/PlaygroundModel.swift; sourceTree = "<group>"; };
 		62DB7F46787A94C2B0B28934 /* Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playground.swift; path = Screens/Playground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356CA62D27C1E02900135703 /* WrappingStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +79,9 @@
 				62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */,
 				62DB72CAE5B4C8F8F9B3EA1A /* GameCard.swift */,
 				62DB72B69DB99F9DA539DF77 /* utils.swift */,
-				62DB7E0979D6F8F891E0042F /* PlaygroundList.swift */,
+				62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */,
+				62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */,
+				62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */,
 			);
 			path = "find-a-couple-game-swiftui";
 			sourceTree = "<group>";
@@ -103,6 +111,9 @@
 			dependencies = (
 			);
 			name = "find-a-couple-game-swiftui";
+			packageProductDependencies = (
+				356CA62C27C1E02900135703 /* WrappingStack */,
+			);
 			productName = "find-a-couple-game-swiftui";
 			productReference = 356CA61827C1B03600135703 /* find-a-couple-game-swiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 356CA60F27C1B03600135703;
+			packageReferences = (
+				356CA62B27C1E02900135703 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */,
+			);
 			productRefGroup = 356CA61927C1B03600135703 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,7 +197,9 @@
 				62DB7B57660C3E6FA28B9300 /* PlaygroundModel.swift in Sources */,
 				62DB7762237257DDD65A5FD7 /* GameCard.swift in Sources */,
 				62DB76C79F2817F8E7ADEE2A /* utils.swift in Sources */,
-				62DB779C8443B06BB100C683 /* PlaygroundList.swift in Sources */,
+				62DB7251780077AA240EBDCB /* PlaygroundList.swift in Sources */,
+				62DB778798378E8F47CC6654 /* PlaygroundItem.swift in Sources */,
+				62DB74F00CB6E84D3A6BDBD2 /* StartButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		356CA62B27C1E02900135703 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		356CA62C27C1E02900135703 /* WrappingStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 356CA62B27C1E02900135703 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
+			productName = WrappingStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 356CA61027C1B03600135703 /* Project object */;
 }

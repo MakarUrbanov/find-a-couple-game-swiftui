@@ -1,24 +1,20 @@
 import SwiftUI
 
 struct Playground: View {
-  @StateObject var playground: PlaygroundModel = PlaygroundModel(cardsMode: .cards4)
+  @StateObject var playground: PlaygroundModel = PlaygroundModel(cardsMode: .cards16)
 
   var body: some View {
-
     NavigationView {
       VStack {
-        VStack {
-          PlaygroundList()
-        }
+        Spacer()
 
-        Button(action: {
-          playground.prepareGame()
-        }, label: { Text("Start") })
+        PlaygroundList()
 
-          .navigationTitle("Playground")
-          .navigationBarTitleDisplayMode(.inline)
+        StartButtons()
 
       }
+        .navigationBarTitle("Playground", displayMode: .inline)
+        .environmentObject(playground)
     }
   }
 }
