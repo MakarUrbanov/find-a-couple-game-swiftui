@@ -20,6 +20,10 @@ struct InfoBlock: View {
         .foregroundColor(.white)
         .cornerRadius(8)
         .multilineTextAlignment(.center)
+        .onTapGesture {
+          UserDefaults.standard.removeObject(forKey: PlaygroundUserDefaultsKeys.topScores.rawValue)
+          print("PRESSED")
+        }
 
         Text(String(format: "Timer\n%.1f", playgroundVM.secondsTimer))
         .frame(maxWidth: metrics.size.width * 0.3, maxHeight: metrics.size.height)

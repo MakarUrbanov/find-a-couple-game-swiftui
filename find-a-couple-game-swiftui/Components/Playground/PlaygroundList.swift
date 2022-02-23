@@ -2,6 +2,8 @@ import SwiftUI
 
 struct PlaygroundList: View {
   @EnvironmentObject var playgroundVM: PlaygroundVM
+  @State var topScoreByMode: Double = 0.0
+  @State var isItsNewRecord: Bool = false
 
   var countOfColumns: Int {
     get {
@@ -27,16 +29,35 @@ struct PlaygroundList: View {
         ZStack {
 
           if playgroundVM.isGameOver {
-            Text("Game over!")
-            .padding(20)
-            .padding(.horizontal, 20)
-            .background(.blue)
-            .cornerRadius(8)
-            .foregroundColor(.white)
-            .font(.body.weight(.bold))
+            VStack {
+              if isItsNewRecord {
+                VStack {
+                  Text("NEW RECORD!")
+                  .padding(20)
+                  .padding(.horizontal, 20)
+                  .background(.red)
+                  .cornerRadius(8)
+                  .foregroundColor(.white)
+                  .font(.body.weight(.bold))
+                }
+                .padding(.bottom, 20)
+              }
+
+              Text("Game over!")
+              .padding(20)
+              .padding(.horizontal, 20)
+              .background(.blue)
+              .cornerRadius(8)
+              .foregroundColor(.white)
+              .font(.body.weight(.bold))
+            }
             .zIndex(2)
             .onTapGesture {
               playgroundVM.restartGame()
+            }
+            .onDisappear {
+              print("onDisappear")
+              isItsNewRecord = false
             }
           }
 
@@ -70,5 +91,12 @@ struct PlaygroundList: View {
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .padding(.horizontal)
+    .onAppear {
+      topScoreByMode = playgroundVM.topScoreByMode
+    }
+    .onChange(of: playgroundVM.topScoreByMode) {
+      isItsNewRecord = true
+      topScoreByMode = $0
+    }
   }
 }
