@@ -55,6 +55,8 @@ class PlaygroundVM: PlaygroundModel {
     gameCards = []
     closedGameCards = []
     gameMode = .beginning
+    timer.invalidate()
+    secondsTimer = 0.0
   }
 
   func checkSameCardHandler(card: GameCard) {

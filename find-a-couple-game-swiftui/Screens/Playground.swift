@@ -8,6 +8,8 @@ struct Playground: View {
       VStack {
         Spacer()
 
+        InfoBlock()
+
         PlaygroundList()
 
         StartButtons()

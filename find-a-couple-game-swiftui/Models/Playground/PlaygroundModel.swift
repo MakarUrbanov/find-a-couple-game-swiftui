@@ -16,7 +16,7 @@ class PlaygroundModel: ObservableObject {
   @Published var gameCards: [GameCard] = []
   @Published var closedGameCards: [GameCard] = []
   @Published var cardsMode: Int
-  @Published var topScoreByMode: Double = 0
+  @Published var topScoreByMode: Double = 0.0
   @Published var secondsTimer: Double = 0.0
   var timer: Timer = Timer()
   @Published var gameMode: GameMode = .beginning

@@ -18,6 +18,7 @@
 		62DB778798378E8F47CC6654 /* PlaygroundItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */; };
 		62DB77EACC8B03CB36EA50B4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB791EF0B4AC6A9977018A /* MainScreen.swift */; };
 		62DB78721DBC5793E11F4DC7 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7F46787A94C2B0B28934 /* Playground.swift */; };
+		62DB791C5E575F4DFA1EEBBD /* InfoBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7D808F6140CAB1AEA4A1 /* InfoBlock.swift */; };
 		62DB7B57660C3E6FA28B9300 /* PlaygroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */; };
 		62DB7E7DBEA4EB1E1DEA4B26 /* PlaygroundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB78054535D17C82230C7B /* PlaygroundVM.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		62DB78054535D17C82230C7B /* PlaygroundVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundVM.swift; path = ViewModels/Playground/PlaygroundVM.swift; sourceTree = "<group>"; };
 		62DB791EF0B4AC6A9977018A /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreen.swift; path = Screens/MainScreen.swift; sourceTree = "<group>"; };
 		62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartButtons.swift; path = Components/Playground/StartButtons.swift; sourceTree = "<group>"; };
+		62DB7D808F6140CAB1AEA4A1 /* InfoBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoBlock.swift; path = Components/Playground/InfoBlock.swift; sourceTree = "<group>"; };
 		62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundModel.swift; path = Models/Playground/PlaygroundModel.swift; sourceTree = "<group>"; };
 		62DB7F46787A94C2B0B28934 /* Playground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playground.swift; path = Screens/Playground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */,
 				62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */,
 				62DB78054535D17C82230C7B /* PlaygroundVM.swift */,
+				62DB7D808F6140CAB1AEA4A1 /* InfoBlock.swift */,
 			);
 			path = "find-a-couple-game-swiftui";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				62DB778798378E8F47CC6654 /* PlaygroundItem.swift in Sources */,
 				62DB74F00CB6E84D3A6BDBD2 /* StartButtons.swift in Sources */,
 				62DB7E7DBEA4EB1E1DEA4B26 /* PlaygroundVM.swift in Sources */,
+				62DB791C5E575F4DFA1EEBBD /* InfoBlock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
