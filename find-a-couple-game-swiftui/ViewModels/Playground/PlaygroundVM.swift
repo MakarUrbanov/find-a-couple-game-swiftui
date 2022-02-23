@@ -7,6 +7,7 @@ class PlaygroundVM: PlaygroundModel {
 
   func changeCardsMode(cardsMode: CardsModeList) {
     self.cardsMode = cardsMode.rawValue
+    topScoreByMode = topScores[String(cardsMode.rawValue)] ?? 0.0
   }
 
   func prepareGame() {
@@ -56,6 +57,8 @@ class PlaygroundVM: PlaygroundModel {
     if isGameOver {
       timer.invalidate()
       self.isGameOver = true
+
+      setTopScoreByMode()
     }
   }
 

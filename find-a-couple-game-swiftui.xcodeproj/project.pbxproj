@@ -10,7 +10,6 @@
 		356CA61C27C1B03600135703 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CA61B27C1B03600135703 /* App.swift */; };
 		356CA62027C1B03700135703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CA61F27C1B03700135703 /* Assets.xcassets */; };
 		356CA62327C1B03700135703 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CA62227C1B03700135703 /* Preview Assets.xcassets */; };
-		356CA62D27C1E02900135703 /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = 356CA62C27C1E02900135703 /* WrappingStack */; };
 		62DB7251780077AA240EBDCB /* PlaygroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */; };
 		62DB74F00CB6E84D3A6BDBD2 /* StartButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */; };
 		62DB76C79F2817F8E7ADEE2A /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB72B69DB99F9DA539DF77 /* utils.swift */; };
@@ -47,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				356CA62D27C1E02900135703 /* WrappingStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +116,6 @@
 			);
 			name = "find-a-couple-game-swiftui";
 			packageProductDependencies = (
-				356CA62C27C1E02900135703 /* WrappingStack */,
 			);
 			productName = "find-a-couple-game-swiftui";
 			productReference = 356CA61827C1B03600135703 /* find-a-couple-game-swiftui.app */;
@@ -149,7 +146,6 @@
 			);
 			mainGroup = 356CA60F27C1B03600135703;
 			packageReferences = (
-				356CA62B27C1E02900135703 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */,
 			);
 			productRefGroup = 356CA61927C1B03600135703 /* Products */;
 			projectDirPath = "";
@@ -414,25 +410,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		356CA62B27C1E02900135703 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/diniska/swiftui-wrapping-stack";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		356CA62C27C1E02900135703 /* WrappingStack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 356CA62B27C1E02900135703 /* XCRemoteSwiftPackageReference "swiftui-wrapping-stack" */;
-			productName = WrappingStack;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 356CA61027C1B03600135703 /* Project object */;
 }

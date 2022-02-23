@@ -11,7 +11,6 @@ struct InfoBlock: View {
     GeometryReader { metrics in
 
       HStack {
-
         VStack {
           Text("Top Score \(selectedCardsMode * 2)")
           Text(String(playgroundVM.topScoreByMode))
@@ -20,12 +19,14 @@ struct InfoBlock: View {
         .background(.orange)
         .foregroundColor(.white)
         .cornerRadius(8)
+        .multilineTextAlignment(.center)
 
-        Text(String(format: "%.1f", playgroundVM.secondsTimer))
+        Text(String(format: "Timer\n%.1f", playgroundVM.secondsTimer))
         .frame(maxWidth: metrics.size.width * 0.3, maxHeight: metrics.size.height)
         .background(.blue)
         .foregroundColor(.white)
         .cornerRadius(8)
+        .multilineTextAlignment(.center)
 
         VStack {
           Menu {
@@ -36,7 +37,7 @@ struct InfoBlock: View {
             } label: {
             }
           } label: {
-            Text("\(selectedCardsMode * 2) cards")
+            Text("Cards\n\(selectedCardsMode * 2)")
             .foregroundColor(.white)
             .frame(maxWidth: metrics.size.width * 0.3, maxHeight: metrics.size.height)
           }
