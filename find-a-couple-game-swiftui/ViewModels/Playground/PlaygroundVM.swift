@@ -5,6 +5,10 @@ class PlaygroundVM: PlaygroundModel {
     super.init(cardsMode: cardsMode)
   }
 
+  func changeCardsMode(cardsMode: CardsModeList) {
+    self.cardsMode = cardsMode.rawValue
+  }
+
   func getPreparedGameCardsList(_ gameCards: [GameCard]) -> [GameCard] {
     var newGameCards: [GameCard] = gameCards
 

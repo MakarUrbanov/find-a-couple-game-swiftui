@@ -43,15 +43,15 @@ struct PlaygroundItem: View {
       VStack {
         if isOpen || isSuccess {
           Text(card.emoji)
-            .font(.system(size: 40))
+          .font(.system(size: 40))
         }
       }
-        .frame(width: width, height: height)
-        .background(isSuccess ? .green : .orange)
-        .cornerRadius(12)
-        .onTapGesture {
-          playgroundVM.onPressCard(id: card.id)
-        }
+      .frame(width: width, height: height)
+      .background(isSuccess ? .green : .orange)
+      .cornerRadius(12)
+      .onTapGesture {
+        playgroundVM.onPressCard(id: card.id)
+      }
     }
   }
 }

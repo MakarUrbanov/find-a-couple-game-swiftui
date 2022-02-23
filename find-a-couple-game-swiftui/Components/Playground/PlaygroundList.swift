@@ -30,11 +30,16 @@ struct PlaygroundList: View {
           }
 
         }
-          .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+      } else {
+        Text("Select cards mode and press 'Start'")
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .font(.body.weight(.semibold))
+        .foregroundColor(.orange)
       }
 
     }
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .padding(.horizontal)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .padding(.horizontal)
   }
 }

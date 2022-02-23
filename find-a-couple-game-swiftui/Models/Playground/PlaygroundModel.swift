@@ -1,6 +1,6 @@
 import Foundation
 
-enum CardsModeList: Int {
+enum CardsModeList: Int, CaseIterable {
   case cards4 = 2
   case cards8 = 4
   case cards16 = 8
