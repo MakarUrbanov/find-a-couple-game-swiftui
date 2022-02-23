@@ -24,12 +24,12 @@ func getWidthByMode(parentWidth: Double, mode: Int) -> Double {
 }
 
 struct PlaygroundItem: View {
-  @State var item: GameCard
+  @State var card: GameCard
   @State var width: Double
   @State var height: Double
 
   init(card: GameCard, cardsMode: Int, parentHeight: Double, parentWidth: Double) {
-    item = card
+    self.card = card
     self.width = getWidthByMode(parentWidth: parentWidth, mode: cardsMode)
     self.height = getHeightByMode(parentHeight: parentHeight, mode: cardsMode)
   }
@@ -37,8 +37,10 @@ struct PlaygroundItem: View {
   var body: some View {
     HStack {
       VStack {
-        Text(item.emoji)
-          .font(.system(size: 40))
+        if card.isOpen {
+          Text(card.emoji)
+            .font(.system(size: 40))
+        }
       }
         .frame(width: width, height: height)
         .background(.orange)

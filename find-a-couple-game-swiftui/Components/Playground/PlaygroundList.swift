@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PlaygroundList: View {
-  @EnvironmentObject var playground: PlaygroundModel
+  @EnvironmentObject var playground: PlaygroundVM
 
   var countOfColumns: Int {
     get {
@@ -17,7 +17,7 @@ struct PlaygroundList: View {
   var body: some View {
     GeometryReader { metrics in
 
-      if playground.isStarted {
+      if playground.gameMode != .beginning {
         LazyVGrid(columns: columns) {
 
           ForEach(playground.gameCards) { card in
