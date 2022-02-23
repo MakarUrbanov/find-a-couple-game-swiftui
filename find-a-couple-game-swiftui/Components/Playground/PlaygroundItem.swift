@@ -5,6 +5,9 @@ func getHeightByMode(parentHeight: Double, mode: Int) -> Double {
   case CardsModeList.cards16.rawValue:
     return parentHeight * 0.25
 
+  case CardsModeList.cards8.rawValue:
+    return parentHeight * 0.3
+
   default:
     return parentHeight * 0.5
   }

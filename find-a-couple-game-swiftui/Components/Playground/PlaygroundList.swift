@@ -35,5 +35,6 @@ struct PlaygroundList: View {
 
     }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .padding(.horizontal)
   }
 }
