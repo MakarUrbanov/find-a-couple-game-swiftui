@@ -5,7 +5,13 @@ struct PlaygroundList: View {
 
   var countOfColumns: Int {
     get {
-      playgroundVM.cardsMode == 2 ? 2 : 4
+      switch playgroundVM.cardsMode {
+      case 2:
+        return 2
+
+      default:
+        return 4
+      }
     }
   }
   var columns: [GridItem] {
@@ -31,7 +37,7 @@ struct PlaygroundList: View {
             .zIndex(2)
           }
 
-          LazyVGrid(columns: columns) {
+          LazyVGrid(columns: columns, spacing: 4) {
 
             ForEach(playgroundVM.gameCards) { card in
               PlaygroundItem(

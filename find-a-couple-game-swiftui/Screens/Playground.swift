@@ -4,20 +4,17 @@ struct Playground: View {
   @StateObject var playgroundVM: PlaygroundVM = PlaygroundVM(cardsMode: .cards16)
 
   var body: some View {
-    NavigationView {
-      VStack {
-        Spacer()
+    VStack {
+      Spacer()
 
-        InfoBlock()
+      InfoBlock()
 
-        PlaygroundList()
+      PlaygroundList()
 
-        StartButtons()
+      StartButtons()
 
-        Spacer()
-      }
-        .navigationBarTitle("Playground", displayMode: .inline)
-        .environmentObject(playgroundVM)
+      Spacer()
     }
+    .environmentObject(playgroundVM)
   }
 }

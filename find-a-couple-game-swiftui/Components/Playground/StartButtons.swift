@@ -13,9 +13,8 @@ struct StartButtons: View {
           playgroundVM.prepareGame()
         }, label: {
           Text("Start")
+          .frame(maxWidth: .infinity, maxHeight: 50)
           .foregroundColor(.white)
-          .padding()
-          .padding(.horizontal, 40)
           .background(.blue)
           .cornerRadius(8)
         })
@@ -25,9 +24,8 @@ struct StartButtons: View {
           playgroundVM.startGame()
         }, label: {
           Text("Ready?")
+          .frame(maxWidth: .infinity, maxHeight: 50)
           .foregroundColor(.white)
-          .padding()
-          .padding(.horizontal, 40)
           .background(.blue)
           .cornerRadius(8)
         })
@@ -37,14 +35,14 @@ struct StartButtons: View {
           playgroundVM.restartGame()
         }, label: {
           Text("Restart")
+          .frame(maxWidth: .infinity, maxHeight: 50)
           .foregroundColor(.white)
-          .padding()
-          .padding(.horizontal, 40)
           .background(.blue)
           .cornerRadius(8)
         })
       }
     }
     .frame(maxWidth: .infinity, maxHeight: 80)
+    .padding(.horizontal)
   }
 }

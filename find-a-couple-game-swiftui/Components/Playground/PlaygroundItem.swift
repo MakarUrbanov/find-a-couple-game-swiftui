@@ -2,6 +2,9 @@ import SwiftUI
 
 func getHeightByMode(parentHeight: Double, mode: Int) -> Double {
   switch mode {
+  case CardsModeList.cards32.rawValue:
+    return parentHeight * 0.125
+
   case CardsModeList.cards16.rawValue:
     return parentHeight * 0.25
 

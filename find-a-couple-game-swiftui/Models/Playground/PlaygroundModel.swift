@@ -4,6 +4,7 @@ enum CardsModeList: Int, CaseIterable {
   case cards4 = 2
   case cards8 = 4
   case cards16 = 8
+  case cards32 = 16
 }
 
 enum GameMode: String {
