@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Playground: View {
-  @StateObject var playground: PlaygroundVM = PlaygroundVM(cardsMode: .cards8)
+  @StateObject var playgroundVM: PlaygroundVM = PlaygroundVM(cardsMode: .cards8)
 
   var body: some View {
     NavigationView {
@@ -14,7 +14,7 @@ struct Playground: View {
 
       }
         .navigationBarTitle("Playground", displayMode: .inline)
-        .environmentObject(playground)
+        .environmentObject(playgroundVM)
     }
   }
 }

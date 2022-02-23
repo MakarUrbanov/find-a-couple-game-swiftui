@@ -11,7 +11,6 @@
 		356CA62027C1B03700135703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CA61F27C1B03700135703 /* Assets.xcassets */; };
 		356CA62327C1B03700135703 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CA62227C1B03700135703 /* Preview Assets.xcassets */; };
 		356CA62D27C1E02900135703 /* WrappingStack in Frameworks */ = {isa = PBXBuildFile; productRef = 356CA62C27C1E02900135703 /* WrappingStack */; };
-		62DB70508E91D68FE9D5AB7D /* PlaygroundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB732A8C05ACC278882C2B /* PlaygroundVM.swift */; };
 		62DB7251780077AA240EBDCB /* PlaygroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */; };
 		62DB74F00CB6E84D3A6BDBD2 /* StartButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */; };
 		62DB76C79F2817F8E7ADEE2A /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB72B69DB99F9DA539DF77 /* utils.swift */; };
@@ -20,6 +19,7 @@
 		62DB77EACC8B03CB36EA50B4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB791EF0B4AC6A9977018A /* MainScreen.swift */; };
 		62DB78721DBC5793E11F4DC7 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7F46787A94C2B0B28934 /* Playground.swift */; };
 		62DB7B57660C3E6FA28B9300 /* PlaygroundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */; };
+		62DB7E7DBEA4EB1E1DEA4B26 /* PlaygroundVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB78054535D17C82230C7B /* PlaygroundVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundList.swift; path = Components/Playground/PlaygroundList.swift; sourceTree = "<group>"; };
 		62DB72B69DB99F9DA539DF77 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = utils.swift; path = Models/Playground/utils.swift; sourceTree = "<group>"; };
 		62DB72CAE5B4C8F8F9B3EA1A /* GameCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCard.swift; path = Models/Playground/GameCard.swift; sourceTree = "<group>"; };
-		62DB732A8C05ACC278882C2B /* PlaygroundVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundVM.swift; path = ViewModels/PlaygroundVM.swift; sourceTree = "<group>"; };
 		62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundItem.swift; path = Components/Playground/PlaygroundItem.swift; sourceTree = "<group>"; };
 		62DB7637A09A7B037C52BF45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		62DB78054535D17C82230C7B /* PlaygroundVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundVM.swift; path = ViewModels/Playground/PlaygroundVM.swift; sourceTree = "<group>"; };
 		62DB791EF0B4AC6A9977018A /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreen.swift; path = Screens/MainScreen.swift; sourceTree = "<group>"; };
 		62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartButtons.swift; path = Components/Playground/StartButtons.swift; sourceTree = "<group>"; };
 		62DB7E14D9F771D20C0F8F56 /* PlaygroundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaygroundModel.swift; path = Models/Playground/PlaygroundModel.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 				62DB70DDEE6F64F8AA07D469 /* PlaygroundList.swift */,
 				62DB74C4CAAB23F6F09C8591 /* PlaygroundItem.swift */,
 				62DB7C2BCAF53E1AE84346D9 /* StartButtons.swift */,
-				62DB732A8C05ACC278882C2B /* PlaygroundVM.swift */,
+				62DB78054535D17C82230C7B /* PlaygroundVM.swift */,
 			);
 			path = "find-a-couple-game-swiftui";
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 				62DB7251780077AA240EBDCB /* PlaygroundList.swift in Sources */,
 				62DB778798378E8F47CC6654 /* PlaygroundItem.swift in Sources */,
 				62DB74F00CB6E84D3A6BDBD2 /* StartButtons.swift in Sources */,
-				62DB70508E91D68FE9D5AB7D /* PlaygroundVM.swift in Sources */,
+				62DB7E7DBEA4EB1E1DEA4B26 /* PlaygroundVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

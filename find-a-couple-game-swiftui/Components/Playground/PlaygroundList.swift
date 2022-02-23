@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct PlaygroundList: View {
-  @EnvironmentObject var playground: PlaygroundVM
+  @EnvironmentObject var playgroundVM: PlaygroundVM
 
   var countOfColumns: Int {
     get {
-      playground.cardsMode == 2 ? 2 : 4
+      playgroundVM.cardsMode == 2 ? 2 : 4
     }
   }
   var columns: [GridItem] {
@@ -17,13 +17,13 @@ struct PlaygroundList: View {
   var body: some View {
     GeometryReader { metrics in
 
-      if playground.gameMode != .beginning {
+      if playgroundVM.gameMode != .beginning {
         LazyVGrid(columns: columns) {
 
-          ForEach(playground.gameCards) { card in
+          ForEach(playgroundVM.gameCards) { card in
             PlaygroundItem(
               card: card,
-              cardsMode: playground.cardsMode,
+              cardsMode: playgroundVM.cardsMode,
               parentHeight: metrics.size.height,
               parentWidth: metrics.size.width
             )

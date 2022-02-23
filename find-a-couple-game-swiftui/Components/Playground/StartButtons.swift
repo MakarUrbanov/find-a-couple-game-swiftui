@@ -1,19 +1,19 @@
 import SwiftUI
 
 struct StartButtons: View {
-  @EnvironmentObject var playground: PlaygroundVM
+  @EnvironmentObject var playgroundVM: PlaygroundVM
 
   var body: some View {
     VStack {
-      switch playground.gameMode {
+      switch playgroundVM.gameMode {
       case .beginning:
         Button(action: {
-          playground.prepareGame()
+          playgroundVM.prepareGame()
         }, label: { Text("Start") })
 
       case .prepared:
         Button(action: {
-          playground.startGame()
+          playgroundVM.startGame()
         }, label: { Text("Ready?") })
 
       default:
