@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct Playground: View {
-  @StateObject var playgroundVM: PlaygroundVM = PlaygroundVM(cardsMode: .cards8)
+  @StateObject var playgroundVM: PlaygroundVM = PlaygroundVM(cardsMode: .cards16)
 
   var body: some View {
     NavigationView {

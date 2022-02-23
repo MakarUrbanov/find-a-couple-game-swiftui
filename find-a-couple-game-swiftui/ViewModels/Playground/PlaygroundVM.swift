@@ -51,8 +51,39 @@ class PlaygroundVM: PlaygroundModel {
     self.gameMode = .started
   }
 
-  func checkCardHandler(card: GameCard) {
+  func restartGame() {
+    gameCards = []
+    closedGameCards = []
+    gameMode = .beginning
+  }
 
+  func checkSameCardHandler(card: GameCard) {
+    if closedGameCards.count % 2 == 0 || closedGameCards.isEmpty {
+      closedGameCards.append(card)
+
+      return
+    }
+
+    let lastClosedGameCard = closedGameCards[closedGameCards.count - 1]
+    let isLastSameCard = lastClosedGameCard.emoji == card.emoji
+
+    if isLastSameCard {
+      closedGameCards.append(card)
+
+      return
+    }
+
+    closedGameCards.removeLast()
+
+    gameCards = gameCards.map { gameCard in
+      if gameCard.id == card.id || gameCard.id == lastClosedGameCard.id {
+        gameCard.isOpen = false
+        gameCard.isSuccess = false
+        return gameCard
+      }
+
+      return gameCard
+    }
   }
 
   func onPressCard(id: String) {
@@ -67,10 +98,19 @@ class PlaygroundVM: PlaygroundModel {
         return
       }
 
-      let newGameCard = GameCard(emoji: gameCard.emoji, isOpen: true)
-      gameCards[gameCardIndex] = newGameCard
+      gameCards = gameCards.map { card in
+        if card.id == gameCard.id {
+          card.isSuccess = true
+          card.isOpen = true
+          return card
+        }
 
+        return card
+      }
 
+      let card = gameCards[gameCardIndex]
+
+      checkSameCardHandler(card: card)
     }
   }
 }

@@ -18,10 +18,11 @@ struct StartButtons: View {
 
       default:
         Button(action: {
-          // TODO stop the game
-        }, label: { Text("Stop") })
+          playgroundVM.restartGame()
+        }, label: { Text("Restart") })
       }
     }
       .frame(maxWidth: .infinity, maxHeight: 50)
+      .padding(.top)
   }
 }

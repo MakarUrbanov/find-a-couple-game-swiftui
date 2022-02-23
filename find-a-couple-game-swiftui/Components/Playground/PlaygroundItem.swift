@@ -36,15 +36,18 @@ struct PlaygroundItem: View {
   }
 
   var body: some View {
+    let isOpen = card.isOpen
+    let isSuccess = card.isSuccess
+
     HStack {
       VStack {
-        if card.isOpen || card.isSuccess {
+        if isOpen || isSuccess {
           Text(card.emoji)
             .font(.system(size: 40))
         }
       }
         .frame(width: width, height: height)
-        .background(.orange)
+        .background(isSuccess ? .green : .orange)
         .cornerRadius(12)
         .onTapGesture {
           playgroundVM.onPressCard(id: card.id)
