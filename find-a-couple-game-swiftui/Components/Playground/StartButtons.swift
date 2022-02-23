@@ -5,24 +5,46 @@ struct StartButtons: View {
 
   var body: some View {
     VStack {
+      Spacer()
+
       switch playgroundVM.gameMode {
       case .beginning:
         Button(action: {
           playgroundVM.prepareGame()
-        }, label: { Text("Start") })
+        }, label: {
+          Text("Start")
+          .foregroundColor(.white)
+          .padding()
+          .padding(.horizontal, 40)
+          .background(.blue)
+          .cornerRadius(8)
+        })
 
       case .prepared:
         Button(action: {
           playgroundVM.startGame()
-        }, label: { Text("Ready?") })
+        }, label: {
+          Text("Ready?")
+          .foregroundColor(.white)
+          .padding()
+          .padding(.horizontal, 40)
+          .background(.blue)
+          .cornerRadius(8)
+        })
 
       default:
         Button(action: {
           playgroundVM.restartGame()
-        }, label: { Text("Restart") })
+        }, label: {
+          Text("Restart")
+          .foregroundColor(.white)
+          .padding()
+          .padding(.horizontal, 40)
+          .background(.blue)
+          .cornerRadius(8)
+        })
       }
     }
-      .frame(maxWidth: .infinity, maxHeight: 50)
-      .padding(.top)
+    .frame(maxWidth: .infinity, maxHeight: 80)
   }
 }

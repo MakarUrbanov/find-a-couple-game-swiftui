@@ -18,17 +18,32 @@ struct PlaygroundList: View {
     GeometryReader { metrics in
 
       if playgroundVM.gameMode != .beginning {
-        LazyVGrid(columns: columns) {
+        ZStack {
 
-          ForEach(playgroundVM.gameCards) { card in
-            PlaygroundItem(
-              card: card,
-              cardsMode: playgroundVM.cardsMode,
-              parentHeight: metrics.size.height,
-              parentWidth: metrics.size.width
-            )
+          if playgroundVM.isGameOver {
+            Text("Game over!")
+            .padding(20)
+            .padding(.horizontal, 20)
+            .background(.blue)
+            .cornerRadius(8)
+            .foregroundColor(.white)
+            .font(.body.weight(.bold))
+            .zIndex(2)
           }
 
+          LazyVGrid(columns: columns) {
+
+            ForEach(playgroundVM.gameCards) { card in
+              PlaygroundItem(
+                card: card,
+                cardsMode: playgroundVM.cardsMode,
+                parentHeight: metrics.size.height,
+                parentWidth: metrics.size.width
+              )
+            }
+
+          }
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
       } else {

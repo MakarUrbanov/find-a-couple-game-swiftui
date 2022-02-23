@@ -13,7 +13,7 @@ struct InfoBlock: View {
       HStack {
 
         VStack {
-          Text("Top Score")
+          Text("Top Score \(selectedCardsMode * 2)")
           Text(String(playgroundVM.topScoreByMode))
         }
         .frame(maxWidth: metrics.size.width * 0.35, maxHeight: metrics.size.height)
@@ -28,16 +28,23 @@ struct InfoBlock: View {
         .cornerRadius(8)
 
         VStack {
-          Picker("", selection: $selectedCardsMode) {
-            ForEach(cardsModeList, id: \.self) {
-              Text("\($0 * 2) cards")
+          Menu {
+            Picker(selection: $selectedCardsMode) {
+              ForEach(cardsModeList, id: \.self) {
+                Text("\($0 * 2) cards")
+              }
+            } label: {
             }
+          } label: {
+            Text("\(selectedCardsMode * 2) cards")
+            .foregroundColor(.white)
+            .frame(maxWidth: metrics.size.width * 0.3, maxHeight: metrics.size.height)
           }
-          .pickerStyle(.menu)
           .onChange(of: selectedCardsMode, perform: { cardsMode in
             let cardsModeInt = CardsModeList(rawValue: cardsMode)
             playgroundVM.changeCardsMode(cardsMode: cardsModeInt ?? .cards8)
           })
+          .disabled(playgroundVM.gameMode != GameMode.beginning)
         }
         .frame(maxWidth: metrics.size.width * 0.35, maxHeight: metrics.size.height)
         .background(.orange)

@@ -20,8 +20,23 @@ class PlaygroundModel: ObservableObject {
   @Published var secondsTimer: Double = 0.0
   var timer: Timer = Timer()
   @Published var gameMode: GameMode = .beginning
+  @Published var isGameOver: Bool = false
 
   init(cardsMode: CardsModeList) {
     self.cardsMode = cardsMode.rawValue
+  }
+
+  func getPreparedGameCardsList(_ gameCards: [GameCard]) -> [GameCard] {
+    var newGameCards: [GameCard] = gameCards
+
+    newGameCards.forEach { gameCard in
+      newGameCards.append(GameCard(emoji: gameCard.emoji))
+    }
+
+    newGameCards = newGameCards.sorted { gameCard1, gameCard2 in
+      gameCard1.randomPosition > gameCard2.randomPosition
+    }
+
+    return newGameCards
   }
 }

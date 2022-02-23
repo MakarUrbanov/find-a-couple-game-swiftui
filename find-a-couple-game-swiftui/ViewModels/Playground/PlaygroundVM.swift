@@ -9,20 +9,6 @@ class PlaygroundVM: PlaygroundModel {
     self.cardsMode = cardsMode.rawValue
   }
 
-  func getPreparedGameCardsList(_ gameCards: [GameCard]) -> [GameCard] {
-    var newGameCards: [GameCard] = gameCards
-
-    newGameCards.forEach { gameCard in
-      newGameCards.append(GameCard(emoji: gameCard.emoji))
-    }
-
-    newGameCards = newGameCards.sorted { gameCard1, gameCard2 in
-      gameCard1.randomPosition > gameCard2.randomPosition
-    }
-
-    return newGameCards
-  }
-
   func prepareGame() {
     var gameCards: [GameCard] = []
 
@@ -61,6 +47,16 @@ class PlaygroundVM: PlaygroundModel {
     gameMode = .beginning
     timer.invalidate()
     secondsTimer = 0.0
+    self.isGameOver = false
+  }
+
+  func checkTheEndGame() {
+    let isGameOver = gameCards.count == closedGameCards.count
+
+    if isGameOver {
+      timer.invalidate()
+      self.isGameOver = true
+    }
   }
 
   func checkSameCardHandler(card: GameCard) {
@@ -75,6 +71,7 @@ class PlaygroundVM: PlaygroundModel {
 
     if isLastSameCard {
       closedGameCards.append(card)
+      checkTheEndGame()
 
       return
     }

@@ -14,6 +14,7 @@ struct Playground: View {
 
         StartButtons()
 
+        Spacer()
       }
         .navigationBarTitle("Playground", displayMode: .inline)
         .environmentObject(playgroundVM)
