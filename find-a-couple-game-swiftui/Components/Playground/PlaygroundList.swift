@@ -35,6 +35,9 @@ struct PlaygroundList: View {
             .foregroundColor(.white)
             .font(.body.weight(.bold))
             .zIndex(2)
+            .onTapGesture {
+              playgroundVM.restartGame()
+            }
           }
 
           LazyVGrid(columns: columns, spacing: 4) {
@@ -53,10 +56,15 @@ struct PlaygroundList: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
       } else {
-        Text("Select cards mode and press 'Start'")
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .font(.body.weight(.semibold))
-        .foregroundColor(.orange)
+        VStack {
+          Text("Select cards mode and press 'Start'")
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
+          .font(.body.weight(.semibold))
+          .foregroundColor(.orange)
+        }
+        .onTapGesture {
+          playgroundVM.prepareGame()
+        }
       }
 
     }

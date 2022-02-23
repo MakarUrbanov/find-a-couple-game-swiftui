@@ -31,6 +31,9 @@ struct PlaygroundItem: View {
   @State var card: GameCard
   @State var width: Double
   @State var height: Double
+  @State var isTapped = false
+  let ANIMATION_DURATION = 0.06
+  @State var rotateAnimation: Double = 0.0
 
   init(card: GameCard, cardsMode: Int, parentHeight: Double, parentWidth: Double) {
     self.card = card
@@ -52,8 +55,17 @@ struct PlaygroundItem: View {
       .frame(width: width, height: height)
       .background(isSuccess ? .green : .orange)
       .cornerRadius(12)
+      .scaleEffect(isTapped ? 0.9 : 1)
+      .rotation3DEffect(.degrees(isOpen ? 0 : 180), axis: (x: 0, y: 1, z: 0))
+      .animation(.easeInOut(duration: ANIMATION_DURATION), value: isTapped)
+      .animation(.easeInOut(duration: ANIMATION_DURATION), value: isOpen)
       .onTapGesture {
-        playgroundVM.onPressCard(id: card.id)
+        isTapped = true
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + ANIMATION_DURATION) {
+          isTapped = false
+          playgroundVM.onPressCard(id: card.id)
+        }
       }
     }
   }

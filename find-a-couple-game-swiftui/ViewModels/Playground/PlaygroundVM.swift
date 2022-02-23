@@ -81,14 +81,16 @@ class PlaygroundVM: PlaygroundModel {
 
     closedGameCards.removeLast()
 
-    gameCards = gameCards.map { gameCard in
-      if gameCard.id == card.id || gameCard.id == lastClosedGameCard.id {
-        gameCard.isOpen = false
-        gameCard.isSuccess = false
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+      self.gameCards = self.gameCards.map { gameCard in
+        if gameCard.id == card.id || gameCard.id == lastClosedGameCard.id {
+          gameCard.isOpen = false
+          gameCard.isSuccess = false
+          return gameCard
+        }
+
         return gameCard
       }
-
-      return gameCard
     }
   }
 
